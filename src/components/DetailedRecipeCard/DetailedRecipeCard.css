@@ -1,0 +1,17 @@
+.card {
+  background-color: var(--background-color) !important;
+}
+
+div {
+  background-color: var(--background-color) !important;
+}
+
+
+ul.ps-3 li::marker {
+    color: var(--primary-color); /* Cambia il colore dei pallini a verde */
+  }
+  
+strong {
+    color: var(--primary-color);
+}  
+
