@@ -132,7 +132,7 @@ const AdvancedSearchForm = ({ onError }) => {
       {dietOptions.map((option) => (
         <div
           key={option}
-          className="p-2 cursor-pointer hover:bg-gray-100 transition"
+          className="p-2 cursor-pointer"
           onClick={() => { 
             setDiet(option);
             setShowDietOptions(false);

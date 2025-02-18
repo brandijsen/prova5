@@ -1,1 +1,8 @@
-- rimetti tooltip su smallrecipecard
+- favicon
+- onError advserch
+- mobile
+- tablet
+- variabili ambientali
+- readme
+- presentazione
+- commenti

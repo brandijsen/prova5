@@ -88,7 +88,8 @@ const SearchBar = () => {
     <div
       key={recipe.id}
       onClick={() => handleSuggestionClick(recipe)}
-      className="flex items-center cursor-pointer hover:bg-[#4CAF50] hover:text-white px-3 py-2"
+      className="flex items-center cursor-pointer px-3 py-2"
+      id="suggestion-title"
     >
       <img
         src={recipe.image || "/placeholder.jpg"}

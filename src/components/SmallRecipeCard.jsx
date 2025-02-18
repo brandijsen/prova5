@@ -16,7 +16,7 @@ const SmallRecipeCard = ({ recipe }) => {
 
   return (
     <div
-      className="relative flex flex-col justify-between cursor-pointer text-center rounded-xl shadow-md hover:shadow-[0px_4px_10px_rgb(76,175,80)] transition-shadow duration-300 bg-white"
+      className="relative flex flex-col justify-between cursor-pointer text-center rounded-xl shadow-md transition-shadow duration-300 bg-white"
       onClick={handleCardClick}
       id="recipe-card_small"
     >

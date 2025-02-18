@@ -43,6 +43,15 @@ button:hover {
   cursor: pointer;
 }
 
+#suggestion-title:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#recipe-card_small:hover {
+  box-shadow: 0px 4px 10px rgb(76, 175, 80);
+}
+
 #dropdown-option:hover {
   background-color: #4CAF50;
   color: white;
