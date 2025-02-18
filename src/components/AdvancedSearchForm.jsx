@@ -104,23 +104,39 @@ const AdvancedSearchForm = ({ onError }) => {
 
 
       <div className="relative" ref={dietMenuRef}>
+  {/* Label */}
   <label className="block text-gray-700 font-medium mb-2">Diet</label>
+
+  {/* Selettore principale */}
   <div
     className="w-full p-3 border border-gray-300 rounded-md cursor-pointer flex items-center justify-between"
     onClick={() => setShowDietOptions(!showDietOptions)}
   >
-    <span className="text-left flex-1 no-transform">{diet || "Select a diet"}</span>
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <span className="text-left flex-1 no-transform">
+      {diet || "Select a diet"}
+    </span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-5 w-5 text-gray-600"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
     </svg>
   </div>
+
+  {/* Menu delle opzioni */}
   {showDietOptions && (
-    <div className="absolute w-full bg-white border rounded-md mt-1 shadow-md z-10 overflow-hidden">
+    <div className="absolute w-full bg-white rounded-md mt-1 shadow-md z-10 overflow-hidden">
       {dietOptions.map((option) => (
         <div
           key={option}
-          className="p-2 cursor-pointer"
-          onClick={() => { setDiet(option); setShowDietOptions(false); }}
+          className="p-2 cursor-pointer hover:bg-gray-100 transition"
+          onClick={() => { 
+            setDiet(option);
+            setShowDietOptions(false);
+          }}
           id="advanced-option"
         >
           {option}
@@ -129,6 +145,7 @@ const AdvancedSearchForm = ({ onError }) => {
     </div>
   )}
 </div>
+
 
 <div className="relative" ref={dishTypeMenuRef}>
   <label className="block text-gray-700 font-medium mb-2">Dish Type</label>
@@ -142,7 +159,7 @@ const AdvancedSearchForm = ({ onError }) => {
     </svg>
   </div>
   {showDishTypeOptions && (
-    <div className="absolute w-full bg-white border rounded-md mt-1 shadow-md z-10 max-h-60 overflow-y-auto">
+    <div className="absolute w-full bg-white rounded-md mt-1 shadow-md z-10 max-h-60 overflow-y-auto">
       {dishTypeOptions.map((type) => (
         <div
           key={type}
@@ -175,12 +192,11 @@ const AdvancedSearchForm = ({ onError }) => {
       <div className="flex items-center space-x-3">
         <label htmlFor="healthyScoreFilter" className="text-gray-700 font-medium">Healthy</label>
         <input
-  id="healthyScoreFilter"
-  type="checkbox"
-  checked={highHealthScore}
-  onChange={(e) => setHighHealthScore(e.target.checked)}
-  className="h-5 w-5 appearance-none border border-gray-300 rounded-md"
-/>
+          id="healthyScoreFilter"
+          type="checkbox"
+          checked={highHealthScore}
+          onChange={(e) => setHighHealthScore(e.target.checked)}
+          className="h-5 w-5 appearance-none border border-gray-300 rounded-md cursor-pointer"/>
 
       </div>
 

@@ -25,13 +25,14 @@ const HomePage = () => {
   return (
     <div>
       <Header />
-      <div className="container min-h-screen flex flex-col mx-auto mt-8 px-4">
-        <h2 className="text-2xl font-bold mb-4">Discover and share delicious and healthy vegetarian recipes</h2>
-        <div className="grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-4 px-0">
-          {recipes.map((recipe) => (
-            <SmallRecipeCard key={recipe.id} recipe={recipe} />
-          ))}
-        </div>
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+      <h2 className="text-2xl font-bold mb-8">Discover and share delicious and healthy vegetarian recipes</h2>
+        <div className="grid grid-cols-4 gap-20 w-full">
+  {recipes.slice(0, 12).map((recipe) => (
+      <SmallRecipeCard key={recipe.id} recipe={recipe} />
+  ))}
+</div>
+
       </div>
       <Footer />
     </div>

@@ -26,18 +26,16 @@ const AdvancedSearchResults = () => {
   return (
     <div>
       <Header />
-      <div className="container min-h-screen mx-auto px-4 mt-4">
-        <h2 className="mb-4 text-xl font-semibold">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+        <h2 className="text-2xl font-bold mb-8">
           Results for: <br />
           {selectedParameters || "your search"}{" "}
           <small className="text-red-500">({results.length})</small>
         </h2>
         {results.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {results.map((recipe) => (
-              <div key={recipe.id} className="mb-4">
-                <SmallRecipeCard recipe={recipe} />
-              </div>
+          <div className="grid grid-cols-4 gap-20 w-full">
+          {results.map((recipe) => (
+                <SmallRecipeCard key={recipe.id} recipe={recipe} />
             ))}
           </div>
         ) : (

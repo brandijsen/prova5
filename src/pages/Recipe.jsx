@@ -41,24 +41,19 @@ const Recipe = () => {
   };
   
 
-  if (!recipe) {
-    return <div className="text-center mt-4">No recipe found</div>;
-  }
 
   return (
     <div>
       <Header />
-      <div className="container mx-auto px-4 mt-4">
-        <DetailedRecipeCard recipe={recipe} />
+      <div className="container mx-auto px-4 mt-10 mb-20">
+        {recipe && <DetailedRecipeCard recipe={recipe} />}
         <button
-  onClick={handleSimilarRecipes}
-  className="px-4 py-2 mt-4 mx-auto block rounded-md border border-gray-300 bg-[#4CAF50] text-sm font-medium text-white"
-  id="similar-recipes_button"
->
-  Similar Recipes
-</button>
-
-
+          onClick={handleSimilarRecipes}
+          className="px-4 py-2 mt-4 mx-auto block rounded-md border border-gray-300 bg-[#4CAF50] text-sm font-bold text-white"
+          id="similar-recipes_button"
+        >
+          Similar Recipes
+        </button>
       </div>
       <Footer />
     </div>

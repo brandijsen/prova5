@@ -28,8 +28,8 @@ const FilteredRecipes = () => {
     <>
       <Header />
 
-      <div className="container min-h-screen flex flex-col mx-auto mt-8 px-4">
-        <h2 className="text-2xl font-semibold my-4">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+        <h2 className="text-2xl font-bold mb-8">
           {diet
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -38,11 +38,9 @@ const FilteredRecipes = () => {
           <small className="text-red-500"> ({recipes.length})</small>
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-20 w-full">
           {recipes.map((recipe) => (
-            <div key={recipe.id} className="mb-4">
-              <SmallRecipeCard recipe={recipe} />
-            </div>
+              <SmallRecipeCard  key={recipe.id} recipe={recipe} />
           ))}
         </div>
       </div>

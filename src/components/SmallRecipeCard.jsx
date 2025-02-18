@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { filterDiets, filterDishTypes } from "../services/utils";
@@ -15,8 +16,9 @@ const SmallRecipeCard = ({ recipe }) => {
 
   return (
     <div
-      className="relative flex flex-col justify-between cursor-pointer overflow-hidden text-center rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 bg-white w-[300px] h-[350px]"
+      className="relative flex flex-col justify-between cursor-pointer text-center rounded-xl shadow-md hover:shadow-[0px_4px_10px_rgb(76,175,80)] transition-shadow duration-300 bg-white"
       onClick={handleCardClick}
+      id="recipe-card_small"
     >
       {/* Immagine */}
       <img
@@ -27,36 +29,38 @@ const SmallRecipeCard = ({ recipe }) => {
 
       {/* Contenuto */}
       <div className="p-4 flex flex-col items-center">
-        {/* Titolo */}
-        <h5
-          className="text-lg font-bold text-gray-800 mb-2 px-2 line-clamp-1"
-          title={recipe.title} // Imposta il titolo completo
-          onMouseEnter={() => setIsHovered(true)} // Imposta isHovered a true quando il mouse è sopra
-          onMouseLeave={() => setIsHovered(false)} // Imposta isHovered a false quando il mouse lascia
-        >
-          {recipe.title}
-        </h5>
-
-        {/* Tooltip personalizzato */}
-        {isHovered && (
-          <div className="absolute top-[-35px] left-1/2 transform -translate-x-1/2 bg-black bg-opacity-70 text-white py-1 px-2 text-sm rounded-md z-10 whitespace-nowrap">
+        {/* Contenitore titolo con tooltip */}
+        <div className="relative flex justify-center w-full">
+          <h5
+            className="text-lg font-bold text-[#4CAF50] mb-2 px-2 text-center line-clamp-1 relative"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             {recipe.title}
-          </div>
-        )}
+          </h5>
+
+          {/* Tooltip personalizzato */}
+          {isHovered && (
+            <div className="absolute top-full left-1/2 transform -translate-x-1/2 translate-y-[1px] bg-white text-black px-3 py-1 text-sm rounded-md z-50 shadow-lg whitespace-nowrap border border-gray-300">
+            {recipe.title}
+            </div>
+          )}
+        </div>
+
 
         {/* Sezione Diete (con placeholder per mantenere altezza costante) */}
         <div className="flex flex-wrap justify-center gap-4 mt-2 h-[24px]">
-  {filteredDiets.length > 0 ? (
-    filteredDiets.map((diet) => (
-      <span
-        key={diet}
-        className="text-sm text-gray-700 capitalize font-medium"
-      >
-        {diet}
-      </span>
-    ))
-  ) : null}
-</div>
+          {filteredDiets.length > 0 ? (
+            filteredDiets.map((diet) => (
+              <span
+                key={diet}
+                className="text-sm text-gray-700 capitalize font-medium"
+              >
+               {diet}
+              </span>
+            ))
+          ) : null}
+        </div>
 
         {/* Tipo di piatto (con placeholder per mantenere altezza costante) */}
         <div className="flex flex-wrap justify-center gap-1 mt-2 h-[24px]">

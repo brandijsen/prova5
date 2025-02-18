@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Header from "../components/Header.jsx";
@@ -54,8 +55,8 @@ const SimilarRecipes = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto px-4 mt-4">
-        <h2 className="text-2xl font-bold mb-4">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+        <h2 className="text-2xl font-bold mb-8">
           Similar recipes to "{recipeTitle}"{" "}
           {detailedRecipes && detailedRecipes.length > 0 && (
             <small className="text-red-500">({detailedRecipes.length})</small>
@@ -65,11 +66,9 @@ const SimilarRecipes = () => {
           // Show nothing if the state is null
           <></>
         ) : detailedRecipes.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-            {detailedRecipes.map((recipe) => (
-              <div key={recipe.id} className="mb-4">
-                <SmallRecipeCard recipe={recipe} />
-              </div>
+          <div className="grid grid-cols-4 gap-20 w-full">
+          {detailedRecipes.map((recipe) => (
+                <SmallRecipeCard key={recipe.id} recipe={recipe} />
             ))}
           </div>
         ) : (

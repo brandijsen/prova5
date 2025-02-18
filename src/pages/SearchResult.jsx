@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
@@ -23,20 +24,18 @@ const SearchResult = () => {
   return (
     <div>
       <Header />
-      <div className="container min-h-screen flex flex-col mx-auto px-4 mt-4">
-        <h2 className="mb-4 text-xl font-semibold">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+        <h2 className="text-2xl font-bold mb-8">
           Results for "{query}" 
-          <small className="text-sm text-gray-500"> ({results.length})</small>
+          <small className="text-red-500"> ({results.length})</small>
         </h2>
 
         {/* Mostra i risultati solo dopo il caricamento */}
         {!loading && (
           results.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-              {results.map((recipe) => (
-                <div key={recipe.id} className="mb-4">
-                  <SmallRecipeCard recipe={recipe} />
-                </div>
+            <div className="grid grid-cols-4 gap-20 w-full">
+            {results.map((recipe) => (
+                  <SmallRecipeCard key={recipe.id} recipe={recipe} />
               ))}
             </div>
           ) : (

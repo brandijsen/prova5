@@ -34,7 +34,7 @@ const DropdownMenu = () => {
     <div ref={dropdownRef} className="relative inline-block text-left">
       <button
         type="button"
-        className="inline-flex justify-center w-full rounded-md border border-gray-300 bg-[#4CAF50] px-4 py-2 text-sm font-medium text-white cursor-pointer focus:outline-none focus:ring-0"
+        className="inline-flex justify-center w-full rounded-md border border-gray-300 bg-[#4CAF50] px-4 py-2 text-sm font-bold text-white cursor-pointer focus:outline-none focus:ring-0"
         id="dropdown-button"
         onClick={toggleDropdown}
       >
@@ -61,7 +61,7 @@ const DropdownMenu = () => {
           id="dropdown-menu"
         >
           <div>
-            {dietOptions.map((option, index) => (
+            {dietOptions.map((option) => (
               <div
                 key={option}
                 onClick={() => handleSelect(option.toLowerCase())}

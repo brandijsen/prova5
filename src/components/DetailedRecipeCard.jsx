@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { filterDiets, filterDishTypes } from "../services/utils"; // Assicurati di importare filterDishTypes
 
 // Funzione per capitalizzare la prima lettera di ogni parola
@@ -29,9 +30,9 @@ const DetailedRecipeCard = ({ recipe }) => {
           alt={recipe.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/50 to-transparent p-4 text-white text-lg font-semibold">
-          {recipe.title} 
-        </div>
+        <h2 className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/50 to-transparent p-4 text-white text-2xl font-bold">
+          {recipe.title}
+        </h2>
       </div>
 
       {/* Informazioni principali */}
