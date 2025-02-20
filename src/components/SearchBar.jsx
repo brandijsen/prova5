@@ -50,8 +50,9 @@ const SearchBar = () => {
   const handleInputChange = (e) => setQuery(e.target.value);
 
   const handleSuggestionClick = (recipe) => {
-    navigate(`/recipe/${recipe.id}`, { state: { recipe } });
+    navigate(`/recipe/${encodeURIComponent(recipe.title)}`, { state: { recipe } });
   };
+  
 
   const handleSearchClick = () => {
     if (query.trim() === "") {

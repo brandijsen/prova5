@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import DetailedRecipeCard from "../components/DetailedRecipeCard.jsx";
 import { getRecipeInformation, getSimilarRecipes } from "../services/apiServices";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
+
 
 const Recipe = () => {
   const location = useLocation();
@@ -39,12 +38,9 @@ const Recipe = () => {
       console.error("Errore durante il recupero delle ricette simili:", error);
     }
   };
-  
-
 
   return (
     <div>
-      <Header />
       <div className="container mx-auto px-4 mt-10 mb-20">
         {recipe && <DetailedRecipeCard recipe={recipe} />}
         <button
@@ -55,7 +51,6 @@ const Recipe = () => {
           Similar Recipes
         </button>
       </div>
-      <Footer />
     </div>
   );
 };

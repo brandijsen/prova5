@@ -1,10 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import Header from "../components/Header.jsx";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
 import { getSimilarRecipes, getRecipeInformation } from "../services/apiServices";
-import Footer from "../components/Footer.jsx";
 
 const SimilarRecipes = () => {
   const location = useLocation();
@@ -54,7 +52,6 @@ const SimilarRecipes = () => {
 
   return (
     <div>
-      <Header />
       <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
         <h2 className="text-2xl font-bold mb-8">
           Similar recipes to "{recipeTitle}"{" "}
@@ -77,7 +74,6 @@ const SimilarRecipes = () => {
           </p>
         )}
       </div>
-      <Footer />
     </div>
   );
 };

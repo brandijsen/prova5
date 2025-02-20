@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import { getRecipesByDiet } from "../services/apiServices"; // Importa la tua funzione
-import Header from '../components/Header.jsx';
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx"; // Importa il componente
-import Footer from "../components/Footer.jsx";
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]); // Stato per memorizzare le ricette
@@ -24,7 +22,6 @@ const HomePage = () => {
 
   return (
     <div>
-      <Header />
       <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
       <h2 className="text-2xl font-bold mb-8">Discover and share delicious and healthy vegetarian recipes</h2>
         <div className="grid grid-cols-4 gap-20 w-full">
@@ -34,7 +31,6 @@ const HomePage = () => {
 </div>
 
       </div>
-      <Footer />
     </div>
   );
 };

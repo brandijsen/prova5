@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
 import AdvancedSearchForm from "../components/AdvancedSearchForm.jsx"; // Importa il componente SearchForm
 
@@ -12,7 +11,6 @@ const AdvancedSearch = () => {
 
   return (
     <div>
-      <Header />
 
       <div className="container mx-auto mt-10 mb-20 px-4">
       <h2 className="text-2xl font-semibold mb-8 text-center">Advanced Search</h2>

@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../components/Header.jsx";
 import { getRecipesByDiet } from "../services/apiServices";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
-import Footer from "../components/Footer.jsx";
 
 const FilteredRecipes = () => {
   const { diet } = useParams(); // Ottieni il parametro "diet" dalla URL
@@ -25,9 +23,6 @@ const FilteredRecipes = () => {
 
 
   return (
-    <>
-      <Header />
-
       <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
         <h2 className="text-2xl font-bold mb-8">
           {diet
@@ -44,9 +39,7 @@ const FilteredRecipes = () => {
           ))}
         </div>
       </div>
-
-      <Footer />
-    </>
+    
   );
 };
 

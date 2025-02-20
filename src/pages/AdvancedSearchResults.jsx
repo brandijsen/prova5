@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SmallRecipeCard from "../components/SmallRecipeCard";
 
@@ -25,7 +24,6 @@ const AdvancedSearchResults = () => {
 
   return (
     <div>
-      <Header />
       <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
         <h2 className="text-2xl font-bold mb-8">
           Results for: <br />

@@ -9,5 +9,5 @@ export default defineConfig({
     tailwindcss(),
    
   ],
-   base: '/prova5/'
+   base: '/green-meal/'
 })

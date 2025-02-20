@@ -8,7 +8,7 @@ const SmallRecipeCard = ({ recipe }) => {
   const navigate = useNavigate();
 
   const handleCardClick = () => {
-    navigate(`/recipe/${recipe.id}`, { state: { recipe } });
+    navigate(`/recipe/${recipe.title}`, { state: { recipe } });
   };
 
   const filteredDiets = recipe.diets ? filterDiets(recipe.diets) : [];

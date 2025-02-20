@@ -2,8 +2,6 @@
 import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
 
 const SearchResult = () => {
   const location = useLocation();
@@ -23,7 +21,6 @@ const SearchResult = () => {
 
   return (
     <div>
-      <Header />
       <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
         <h2 className="text-2xl font-bold mb-8">
           Results for "{query}" 
@@ -45,7 +42,6 @@ const SearchResult = () => {
           )
         )}
       </div>
-      <Footer />
     </div>
   );
 };
