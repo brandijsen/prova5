@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Footer from "../components/Footer.jsx";
 import AdvancedSearchForm from "../components/AdvancedSearchForm.jsx"; // Importa il componente SearchForm
 
 const AdvancedSearch = () => {
@@ -24,7 +23,6 @@ const AdvancedSearch = () => {
         )}
       </div>
       
-      <Footer />
     </div>
   );
 };

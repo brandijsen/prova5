@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchRecipes } from "../services/apiServices";
 import { useNavigate } from "react-router-dom";
-import "./AdvancedSearchForm.css";
 
 const AdvancedSearchForm = ({ onError }) => {
   const [query, setQuery] = useState("");
