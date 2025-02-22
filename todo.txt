@@ -6,3 +6,4 @@
 - readme
 - presentazione
 - commenti
+- fixa altezza container in adv search page x tablet

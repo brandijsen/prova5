@@ -23,7 +23,7 @@ const FilteredRecipes = () => {
 
 
   return (
-      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20" id="container">
         <h2 className="text-2xl font-bold mb-8">
           {diet
             .split(" ")
@@ -33,7 +33,7 @@ const FilteredRecipes = () => {
           <small className="text-red-500"> ({recipes.length})</small>
         </h2>
 
-        <div className="grid grid-cols-4 gap-20 w-full">
+        <div className="grid grid-cols-4 gap-20 w-full" id="recipes-grid">
           {recipes.map((recipe) => (
               <SmallRecipeCard  key={recipe.id} recipe={recipe} />
           ))}

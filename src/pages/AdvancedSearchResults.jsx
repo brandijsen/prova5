@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import Footer from "../components/Footer";
 import SmallRecipeCard from "../components/SmallRecipeCard";
 
 const AdvancedSearchResults = () => {
@@ -23,15 +22,14 @@ const AdvancedSearchResults = () => {
     .join(" | "); // Unisce i parametri con un separatore
 
   return (
-    <div>
-      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20" id="container">
         <h2 className="text-2xl font-bold mb-8">
           Results for: <br />
           {selectedParameters || "your search"}{" "}
           <small className="text-red-500">({results.length})</small>
         </h2>
         {results.length > 0 ? (
-          <div className="grid grid-cols-4 gap-20 w-full">
+          <div className="grid grid-cols-4 gap-20 w-full" id="recipes-grid">
           {results.map((recipe) => (
                 <SmallRecipeCard key={recipe.id} recipe={recipe} />
             ))}
@@ -42,8 +40,6 @@ const AdvancedSearchResults = () => {
           </p>
         )}
       </div>
-      <Footer />
-    </div>
   );
 };
 

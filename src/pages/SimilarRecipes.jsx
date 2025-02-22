@@ -51,8 +51,7 @@ const SimilarRecipes = () => {
   }, [recipeId]);
 
   return (
-    <div>
-      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20" id="container">
         <h2 className="text-2xl font-bold mb-8">
           Similar recipes to "{recipeTitle}"{" "}
           {detailedRecipes && detailedRecipes.length > 0 && (
@@ -63,7 +62,7 @@ const SimilarRecipes = () => {
           // Show nothing if the state is null
           <></>
         ) : detailedRecipes.length > 0 ? (
-          <div className="grid grid-cols-4 gap-20 w-full">
+          <div className="grid grid-cols-4 gap-20 w-full" id="recipes-grid">
           {detailedRecipes.map((recipe) => (
                 <SmallRecipeCard key={recipe.id} recipe={recipe} />
             ))}
@@ -74,7 +73,6 @@ const SimilarRecipes = () => {
           </p>
         )}
       </div>
-    </div>
   );
 };
 

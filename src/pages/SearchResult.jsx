@@ -20,8 +20,7 @@ const SearchResult = () => {
   }, [results, query]); // Ora results è stabile grazie a useMemo
 
   return (
-    <div>
-      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20">
+      <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20" id="container">
         <h2 className="text-2xl font-bold mb-8">
           Results for "{query}" 
           <small className="text-red-500"> ({results.length})</small>
@@ -30,7 +29,7 @@ const SearchResult = () => {
         {/* Mostra i risultati solo dopo il caricamento */}
         {!loading && (
           results.length > 0 ? (
-            <div className="grid grid-cols-4 gap-20 w-full">
+            <div className="grid grid-cols-4 gap-20 w-full" id="recipes-grid">
             {results.map((recipe) => (
                   <SmallRecipeCard key={recipe.id} recipe={recipe} />
               ))}
@@ -42,7 +41,6 @@ const SearchResult = () => {
           )
         )}
       </div>
-    </div>
   );
 };
 

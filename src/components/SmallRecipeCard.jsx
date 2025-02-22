@@ -16,10 +16,10 @@ const SmallRecipeCard = ({ recipe }) => {
 
   return (
     <div
-      className="relative flex flex-col justify-between cursor-pointer text-center rounded-xl shadow-md transition-shadow duration-300 bg-white"
-      onClick={handleCardClick}
-      id="recipe-card_small"
-    >
+    className="relative flex flex-col justify-between cursor-pointer text-center rounded-xl shadow-md transition-shadow duration-300 bg-white z-10"
+    onClick={handleCardClick}
+    id="recipe-card_small"
+  >
       {/* Immagine */}
       <img
         src={recipe.image}
