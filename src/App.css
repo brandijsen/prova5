@@ -113,7 +113,7 @@ button:hover {
 
   }
     
-  @media (min-width: 431px) and (max-width: 768px) {
+  @media (min-width: 432px) and (max-width: 768px) {
     #container {
       padding-left: 35px;
       padding-right: 35px;
@@ -128,13 +128,49 @@ button:hover {
   
   }
 
-  /* smartphone */
-  @media  (max-width: 430px) { 
-  header {
-    background-color: red;
+ 
+
+
+}
+
+@media (max-width: 431px) { 
+ 
+    header {
+      display: flex;
+      flex-direction: column; /* Dispone gli elementi in colonna */
+      align-items: center; /* Centra gli elementi orizzontalmente */
+      justify-content: center; /* Centra gli elementi verticalmente */
+      gap: 1.5rem; /* Aggiungi spazio tra il logo e gli altri elementi */
+      padding: 1rem;
+    }
+
+    #header-section_two {
+      padding: 0px;
+      gap: 20px;
+      transform: scale(.90);
+    }
+
+    #dropdown-button_container {
+      display: none !important;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    #container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+  #recipes-grid {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+    
+
+  }
+
+  #adv-search_form {
+    padding: 10px
   }
 }
-
-
-}
-

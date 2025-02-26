@@ -8,7 +8,7 @@ const Header = () => {
     <header className="flex justify-between items-center p-4 border-b-2 border-[#4CAF50] gap-x-6">
 {/* Div per il logo allineato a sinistra */}
       <div className="flex-1">
-        <Link to="/">
+        <Link to="/" id='advanced-search_link'>
           <img src={headerLogo} alt="header logo" className="h-16 w-auto" id='header-logo'/>
         </Link>
       </div>

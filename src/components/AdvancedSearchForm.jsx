@@ -72,7 +72,7 @@ const AdvancedSearchForm = ({ onError }) => {
   };
 
   return (
-    <form className="space-y-6 max-w-lg mx-auto bg-white p-6 rounded-lg">
+    <form className="space-y-6 max-w-lg mx-auto bg-white p-6 rounded-lg" id="adv-search_form">
       <div>
         <label htmlFor="searchQuery" className="block text-gray-700 font-medium mb-2">Keyword</label>
         <input
