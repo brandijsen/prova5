@@ -203,5 +203,6 @@ header {
 @media (max-height: 800px) and (orientation: landscape) {
 header {
 display: flex;
-      flex-direction: column
+      flex-direction: column;
+      background-color: red;
 }}
