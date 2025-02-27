@@ -124,7 +124,19 @@ button:hover {
   
   @media (min-width: 432px) and (max-width: 767px) {
     
-   
+header {
+  display: flex;
+  flex-direction: column; /* Dispone gli elementi in colonna */
+  gap: 10px;
+}
+
+    #header-section_two {
+      padding: 0;
+    }
+
+    #dropdown-button_container {
+      display: none !important;
+    }
 
     #container {
       padding-left: 35px;
