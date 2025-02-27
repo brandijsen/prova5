@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getRecipesByDiet } from "../services/apiServices";
+import { getRecipesByDiet } from "../services/apiServices.js";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
 
-const FilteredRecipes = () => {
+const Diet = () => {
   const { diet } = useParams(); // Ottieni il parametro "diet" dalla URL
   const [recipes, setRecipes] = useState([]);
 
@@ -43,4 +43,4 @@ const FilteredRecipes = () => {
   );
 };
 
-export default FilteredRecipes;
+export default Diet;

@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import SearchResult from './pages/SearchResult';
 import Recipe from './pages/Recipe';
 import SimilarRecipes from './pages/SimilarRecipes';
-import FilteredRecipes from './pages/FilteredRecipes';
+import Diet from './pages/Diet';
 import AdvancedSearch from "./pages/AdvancedSearch";
 import AdvancedSearchResults from "./pages/AdvancedSearchResults.jsx";
 import './App.css';
@@ -20,7 +20,7 @@ const App = () => {
         <Route path="/advanced-search-results" element={<AdvancedSearchResults />} />
         <Route path="/search-results" element={<SearchResult />} />
         <Route path="/similar-recipes" element={<SimilarRecipes />} />
-        <Route path="/recipes/:diet" element={<FilteredRecipes />} />
+        <Route path="/recipes/:diet" element={<Diet />} />
         <Route path="/recipe/:title" element={<Recipe />} />
       </Routes>
       <Footer/>

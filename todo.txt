@@ -1,7 +1,9 @@
-- favicon
 - onError advserch
-- mobile landscape
 - variabili ambientali
-- readme
+- aggiorna readme
 - presentazione
 - commenti
+- suggestion devono chiudersi quando cliccati (smartphone)
+- pagine devono aprirsi in alto
+- dotenv
+- open graph

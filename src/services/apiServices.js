@@ -2,9 +2,34 @@ import axios from "axios";
 
 const API_KEY = "cde97d25452548fb91a032b5355759a3"; // La tua chiave Spoonacular
 const BASE_URL = "https://api.spoonacular.com/recipes";
+
+/*
 const apiKey = '7df372b3c5464cf0a34f714b09927023'
 const apiKey3 = 'cde97d25452548fb91a032b5355759a3';
 const apiKey2 = '62ceda901da5433e88277b56076302c5'
+*/
+
+export const getVegetarianRecipes = async (query, number = 12) => {
+  try {
+    const params = {
+      apiKey: API_KEY,
+      diet: "vegetarian",
+      number: number,
+      query: query,
+      addRecipeInformation: true,
+    };
+
+    console.log("Fetching vegetarian recipes with params:", params);
+
+    const response = await axios.get(`${BASE_URL}/complexSearch`, { params });
+
+    return { results: response.data.results }; // Ritorna un oggetto con "results"
+  } catch (error) {
+    console.error("Errore nella chiamata API:", error);
+    return { results: [] }; // Ritorna un array vuoto in caso di errore
+  }
+};
+
 
 
 export const getRecipesByDiet = async (diet) => {
@@ -43,28 +68,9 @@ export const getRecipesByDiet = async (diet) => {
   }
 };
 
-export const getVegetarianRecipes = async (query, number = 12) => {
-  try {
-    const params = {
-      apiKey: API_KEY,
-      diet: "vegetarian",
-      number: number,
-      query: query,
-      addRecipeInformation: true,
-    };
 
-    console.log("Fetching vegetarian recipes with params:", params);
 
-    const response = await axios.get(`${BASE_URL}/complexSearch`, { params });
-
-    return { results: response.data.results }; // Ritorna un oggetto con "results"
-  } catch (error) {
-    console.error("Errore nella chiamata API:", error);
-    return { results: [] }; // Ritorna un array vuoto in caso di errore
-  }
-};
-
-export const fetchRecipes = async ({
+export const getRecipesByFilters = async ({
   query,
   excludeIngredients,
   diet,

@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { fetchRecipes } from "../services/apiServices";
+import { getRecipesByFilters } from "../services/apiServices";
 import { useNavigate } from "react-router-dom";
 
 const AdvancedSearchForm = ({ onError }) => {
@@ -59,7 +59,7 @@ const AdvancedSearchForm = ({ onError }) => {
     };
 
     try {
-      const results = await fetchRecipes(searchParams);
+      const results = await getRecipesByFilters(searchParams);
       const filteredResults = highHealthScore ? results.filter((recipe) => recipe.healthScore > 60) : results;
       
       navigate("/advanced-search-results", {
