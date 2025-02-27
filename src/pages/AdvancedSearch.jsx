@@ -9,21 +9,16 @@ const AdvancedSearch = () => {
   };
 
   return (
-    <div>
-
-      <div className="container mx-auto mt-10 mb-20 px-4">
-      <h2 className="text-2xl font-semibold mb-8 text-center">Advanced Search</h2>
-
-        <AdvancedSearchForm onError={handleError} />
-
-        {error && (
-          <div className="mt-4 p-4 text-red-700 bg-red-100 border border-red-400 rounded">
-            {error}
-          </div>
-        )}
+  <div className="flex-1 container mx-auto mt-10 mb-20 px-4" id="adv-search_page">
+    <h2 className="text-2xl font-semibold mb-8 text-center">Advanced Search</h2>
+    <AdvancedSearchForm onError={handleError} />
+    {error && (
+      <div className="mt-4 p-4 text-red-700 bg-red-100 border border-red-400 rounded">
+        {error}
       </div>
-      
-    </div>
+    )}
+  </div>
+
   );
 };
 
