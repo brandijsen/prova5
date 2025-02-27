@@ -199,3 +199,9 @@ header {
     padding: 10px
   }
 }
+
+@media (max-height: 800px) and (orientation: landscape) {
+header {
+display: flex;
+      flex-direction: column
+}}
