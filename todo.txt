@@ -1,9 +1,7 @@
 - favicon
 - onError advserch
-- mobile
-- tablet
+- mobile landscape
 - variabili ambientali
 - readme
 - presentazione
 - commenti
-- fixa altezza container in adv search page x tablet
