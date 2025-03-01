@@ -50,8 +50,11 @@ const SearchBar = () => {
   const handleInputChange = (e) => setQuery(e.target.value);
 
   const handleSuggestionClick = (recipe) => {
+    setSuggestions([]); // Chiude i suggerimenti
     navigate(`/recipe/${encodeURIComponent(recipe.title)}`, { state: { recipe } });
+    window.scrollTo(0, 0); // Scrolla in alto
   };
+  
   
 
   const handleSearchClick = () => {

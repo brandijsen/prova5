@@ -6,4 +6,4 @@
 - suggestion devono chiudersi quando cliccati (smartphone)
 - pagine devono aprirsi in alto
 - dotenv
-- open graph
+- open graph V
