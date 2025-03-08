@@ -3,7 +3,8 @@
 - aggiorna readme
 - presentazione
 - commenti
-- suggestion devono chiudersi quando cliccati (smartphone)
-- pagine devono aprirsi in alto
+- suggestion devono chiudersi quando cliccati (smartphone) V
+- pagine devono aprirsi in alto V
 - dotenv
 - open graph V
+- controlla che useScrollTop sulla pagina Recipe

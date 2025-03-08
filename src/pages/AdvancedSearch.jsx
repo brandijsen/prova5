@@ -1,12 +1,16 @@
 import { useState } from "react";
 import AdvancedSearchForm from "../components/AdvancedSearchForm.jsx"; // Importa il componente SearchForm
+import useScrollToTop from "../services/utils.js";
 
 const AdvancedSearch = () => {
+useScrollToTop()
   const [error, setError] = useState("");
 
   const handleError = (errorMessage) => {
     setError(errorMessage);
   };
+
+  
 
   return (
   <div className="flex-1 container mx-auto mt-10 mb-20 px-4" id="adv-search_page">

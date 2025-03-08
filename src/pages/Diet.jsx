@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getRecipesByDiet } from "../services/apiServices.js";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
+import useScrollToTop from "../services/utils.js";
 
 const Diet = () => {
+  useScrollToTop()
   const { diet } = useParams(); // Ottieni il parametro "diet" dalla URL
   const [recipes, setRecipes] = useState([]);
 

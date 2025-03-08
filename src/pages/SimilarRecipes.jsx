@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
 import { getSimilarRecipes, getRecipeInformation } from "../services/apiServices";
+import useScrollToTop from "../services/utils.js";
 
 const SimilarRecipes = () => {
+  useScrollToTop()
   const location = useLocation();
   const [detailedRecipes, setDetailedRecipes] = useState(null); // Initialize as null
   const recipeId = location.state?.recipeId; // Starting recipe ID

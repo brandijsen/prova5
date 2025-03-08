@@ -1,3 +1,23 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+// Funzione per scrollare la pagina in alto
+const useScrollToTop = () => {
+  const location = useLocation(); // Ottieni la location corrente
+
+  useEffect(() => {
+    console.log('Navigating to:', location.pathname); // Diagnostica la navigazione
+    window.scrollTo(0, 0); // Effettua lo scroll in alto ogni volta che cambia la location
+  }, [location.pathname]); // Dipende solo dal pathname per evitare re-render inutili
+};
+
+export default useScrollToTop;
+
+
+
+
+
+
 export const filterDiets = (diets) => {
   if (typeof diets === "string") {
     diets = diets.split(",").map((diet) => diet.trim());

@@ -2,8 +2,10 @@
 import { useState, useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx";
+import useScrollToTop from "../services/utils.js";
 
 const SearchResult = () => {
+  useScrollToTop()
   const location = useLocation();
   const query = location.state?.query || ""; // Ottiene la query passata tramite state
 

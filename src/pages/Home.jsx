@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { getRecipesByDiet } from "../services/apiServices"; // Importa la tua funzione
 import SmallRecipeCard from "../components/SmallRecipeCard.jsx"; // Importa il componente
+import useScrollToTop from "../services/utils.js";
 
 const HomePage = () => {
   const [recipes, setRecipes] = useState([]); // Stato per memorizzare le ricette
+  useScrollToTop();
 
   useEffect(() => {
     // Funzione per ottenere le ricette vegetariane

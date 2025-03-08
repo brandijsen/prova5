@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
 import SmallRecipeCard from "../components/SmallRecipeCard";
+import useScrollToTop from "../services/utils";
 
 const AdvancedSearchResults = () => {
+  useScrollToTop()
   const location = useLocation();
   const results = location.state?.results || [];
   const { query, diet, maxCalories, dishType, excludeIngredients, highHealthScore } = location.state || {};
@@ -21,6 +23,9 @@ const AdvancedSearchResults = () => {
     .filter(Boolean) // Rimuove i valori falsi (null, undefined, "")
     .join(" | "); // Unisce i parametri con un separatore
 
+
+
+    
   return (
       <div className="container min-h-screen flex flex-col mx-auto px-20 mt-10 mb-20" id="container">
         <h2 className="text-2xl font-bold mb-8">

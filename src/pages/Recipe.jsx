@@ -1,15 +1,19 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { /*useLocation,*/ useNavigate } from "react-router-dom";
 import DetailedRecipeCard from "../components/DetailedRecipeCard.jsx";
 import { getRecipeInformation, getSimilarRecipes } from "../services/apiServices";
-
+import useScrollToTop from "../services/utils.js";
 
 const Recipe = () => {
-  const location = useLocation();
+  //const location = useLocation();
+  useScrollToTop()
   const navigate = useNavigate();
   const recipeId = location.state?.recipe?.id;
   const [recipe, setRecipe] = useState(null);
 
+
+   // Effettua lo scroll verso l'alto ogni volta che cambia la location
+  
   // Recupero della ricetta attuale
   useEffect(() => {
     if (recipeId) {
